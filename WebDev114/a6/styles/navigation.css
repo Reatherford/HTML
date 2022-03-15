@@ -1,0 +1,40 @@
+* {
+	margin: 0;
+    padding: 0;
+}
+
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 125%;
+	width: 706px;
+	background-color: white;
+	margin: 15px auto;
+	padding: 20px;
+/*	border: 1px solid black*/
+}
+
+nav {
+	margin-bottom: 2em;
+	margin-left: .1em;
+}
+/* the styles for the second horizontal navigation menu */
+#nav_menu ul {
+	list-style: none;
+}
+#nav_menu ul li {
+	float: left;
+}
+#nav_menu ul li a {
+	text-align: left;
+	display: block;
+	width: 100%;
+	padding: .5em .5em .5em .5em;      /* padding above and below li elements */
+	text-decoration: none;
+	background-color: blue;
+	color: white;
+	font-weight: bold;
+	border-right: 1px solid white;
+}
+#nav_menu ul li a.lastitem {border-right: none;}	
+#nav_menu ul li a.current { color: rgb(255, 255, 255); }
+#nav_menu ul li a.home {color: hotpink;}
