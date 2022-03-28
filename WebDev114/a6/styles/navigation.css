@@ -30,7 +30,7 @@ nav {
 	width: 100%;
 	padding: .5em .5em .5em .5em;      /* padding above and below li elements */
 	text-decoration: none;
-	background-color: blue;
+	background-color: rgb(0, 0, 0);
 	color: white;
 	font-weight: bold;
 	border-right: 1px solid white;

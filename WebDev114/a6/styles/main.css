@@ -1,14 +1,15 @@
 /* type selectors */
 html {
 	background-image: -moz-linear-gradient(to bottom, white 0%, #facd8a 100%);
-	background-image: -webkit-linear-gradient(to bottom, white 0%, #facd8a 100%);	
+	background-image: -webkit-linear-gradient(to bottom, white 0%, #facd8a 100%);
 	background-image: -o-linear-gradient(to bottom, white 0%, #facd8a 100%);
-	background-image: linear-gradient(to bottom, white 0%, #facd8a 100%);	
+	background-image: linear-gradient(to bottom, white 0%, #facd8a 100%);
 }
 body {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size: 100%;
-	width: 990px;
+	font-size: 100%;
+	width: 96%;                         /* changed from 990 pixels */
+	max-width: 1200px;                  /* maximum width of page */
 	background-color: white;
 	margin: 15px auto;
 	padding: 15px 0;
@@ -19,58 +20,59 @@ section, aside, h1, h2, h3, p {
 	padding: 0;
 }
 section, aside {
-	margin-top: 1.5em;
-	margin-bottom: 1em;	
+	margin-bottom: 1em;
 }
-
-a {
+p {
+	font-size: .875em;                  /* 14 / 16 */
+	padding-bottom: .5em;
+	line-height: 130%;
+}
+em {
 	font-weight: bold;
 }
-a:link, a:visited { color: #931420; }
-a:hover, a:focus { color: black; }
-
-p {
-	font-size: 95%;
-	padding: .25em 0;
+a {
+	font-weight: bold;
+	text-decoration: none;
 }
-em { font-weight: bold; }
+a:link, a:visited {
+	color: #931420 !important;
+}
+a:hover, a:focus {
+	color: black !important;
+}
 
 /* the styles for the header */
-header { 
-   text-indent: 5in;
-   font-weight: 300;
-    margin: .5em;
-    float:  none;
-    padding-top: .5em;
-    padding-bottom: 2em;
+header {
+	width: 100%;                        /* full width of body */
+	padding-bottom: 2em;
 }
 header h2 {
-	font-size: 220%;
-    color: #f2972e;
-    text-shadow: 2px 3px 0 black;
-    margin-left: 120px;
+	font-size: 2.25em;                  /* 36 / 16 */
+	color: #f2972e;
+	text-shadow: 2px 3px 0 black;
+	margin-left: 12.12121%;             /* 120 / 990 */
 	margin-bottom: .25em;
 }
 header h3 {
-	font-size: 130%;
+	font-size: 1.25em;                  /* 20 / 16 */
 	font-style: italic;
-    margin-left: 120px;
+	margin-left: 12.12121%;             /* 120 / 990 */
 }
-header img { 
+header img {
+	width: 8.0808%;                     /* 80 / 990 */
+	max-width: 80px;                    /* native size */
+	min-width: 40px;
 	float: left;
-	margin-left: 20px;
+	margin-left: 2.0202%;               /* 20 / 990 */
 }
-
-/* The styles for the navigation menu - operation */
+/* the styles for the navigation menu - operation */
 #nav_menu ul {
-	list-style: none;
-	position: relative;    /* So the submenus can be positioned */
-}
-#nav_menu ul li {
-	float: left;
+	width: 100%;                        /* full width of body */
+	list-style-type: none;
+	position: relative;
 }
 #nav_menu ul ul {
-	display: none;         /* Don't display submenu until hover of the li element */
+	display: none;
 	position: absolute;
 	top: 100%;
 }
@@ -83,93 +85,198 @@ header img {
 	left: 100%;
 	top: 0;
 }
-#nav_menu ul li:hover > ul {
-	display: block;           /* Display the submenu on hover of the li element */
+#nav_menu ul li.lastitem ul li ul {
+	position: absolute;
+	left: -100%;
+	top: 0;
 }
-#nav_menu ul:after {
+#nav_menu ul li {
+	float: left;
+}
+#nav_menu ul li:hover > ul {
+	display: block;
+}
+#nav_menu > ul::after {
 	content: "";
 	clear: both;
 	display: block;
 }
-
-/* The styles for the navigation menu - formatting */
+/* the styles for the navigation menu - formatting */
 #nav_menu ul {
 	margin: 0;
 	padding: 0;
 }
+#nav_menu ul li {
+	width: 20%;                         /* 198 / 990 */
+}
 #nav_menu ul li a {
 	text-align: center;
 	display: block;
-	width: 198px;
 	padding: .7em 0;
-	text-decoration: none;
 	background-color: #facd8a;
 }
 #nav_menu ul li a.current {
 	color: #f2972e !important;
 }
-#nav_menu ul li:hover ul li a {
-	display: block;
-	text-align: center;
+#nav_menu ul li:hover ul {
+	width: 100%;
+}
+#nav_menu ul li:hover ul li:hover ul li {
+	width: 100%;
 }
 
 /* the styles for the section */
 section {
-	width: 535px;
-	margin-left: 20px;
-	padding-right: 25px;
-	float: right;	
+	width: 54.0404%;                         /* 535 / 990 */
+	float: left;
+	margin-left: 2.0202%;                    /* 20 / 990 */
+	padding: 1.5em 2.52525% 0 0;             /* 25 / 990 */
+
 }
-section ul { 
+section ul {
 	margin-top: 0;
-	margin-bottom: 1.5em; 
+	margin-bottom: 1.5em;
 }
 section li {
-	font-size: 95%;
+	font-size: .875em;                       /* 14 / 16 */
 	padding-bottom: .35em;
 }
 section h1 {
-	font-size: 170%; 
-	margin-bottom: 0.35em;
+	font-size: 1.625em;                      /* 26 / 16 */
+	margin-bottom: .35em;
 }
 section h2 {
-	font-size: 130%;
-	margin-bottom: 0.35em;
+	font-size: 1.25em;                       /* 20 / 16 */
+	margin-bottom: .35em;
 }
-
-#contact_us { margin-top: 1em; }
-a.date_passed  { color: gray; }
+a.date_passed {
+	color: gray;
+}
 
 /* the styles for the sidebar */
 aside {
-	width: 350px;
+	width: 35.35353%;                        /* 350 / 990 */
 	float: left;
-	padding: 20px;
-	background-color: #fcfcfc;
-	margin-right: 20px;
+	padding: 2.0202%;                        /* 20 / 990 */
+	background-color: #ffebc6;
+	margin: 1.5em 2.0202% 0 0;               /* 20 / 990 */
 }
 aside h2 {
-	font-size: 130%;
+	font-size: 1.25em;                       /* 20 / 16 */
 	padding-bottom: .5em;
 }
 aside h3 {
-	font-size: 100%;
+	font-size: 1em;                          /* base font size */
 	color: #931420;
 	padding-bottom: .5em;
 }
 aside p {
-    margin-bottom: .5em; 
-    float: right;
+	margin-bottom: .5em;
 }
-
+aside ul {
+	margin-top: 0;
+	margin-bottom: 1.5em;
+}
+aside li {
+	font-size: .875em;                       /* 14 / 16 */
+	padding-bottom: .35em;
+}
 /* the styles for the footer */
 footer {
 	clear: both;
-	border-top: 2px solid #1d1914;
+	width: 100%;                             /* full width of body */
+	border-top: 2px solid #f2972e;
 	padding-top: .7em;
 }
 footer p {
-	font-size: 80%;
-	text-align: left;
-	margin-right: 20px;
+	font-size: .75em;                        /* 12 / 16 */
+	text-align: right;
+	margin-right: 2.0202%;                   /* 20 / 990 */
+}
+/* hide the mobile menu initially */
+#mobile_menu {
+	display: none;
+}
+/* media queries */
+
+/* tablet portrait to standard 960 */
+@media only screen and (max-width: 959px) {
+    #nav_menu ul li a {
+	    font-size: .875em;                      /* 14 / 16 */
+    }
+    section h1 {
+	    font-size: 1.5em;                       /* 24 / 16 */
+    }
+    section h2, aside h2 {
+	    font-size: 1.125em;                     /* 18 / 16 */
+    }
+}
+
+/* mobile landscape to tablet portrait */
+@media only screen and (max-width: 767px) {
+    #nav_menu {
+        display: none;
+    }
+    #mobile_menu {
+        display: block;
+    }
+    .slicknav_menu {
+        background-color: #facd8a !important;	
+    }
+    body {
+        width: 100%;                           /* full width of screen */
+        margin: 0;                             /* no margins */
+        border: none;                          /* no border */
+    }
+    header, footer p {
+        text-align: center;
+    }
+    footer p { margin-right: 0; }
+    header h2 {
+        font-size: 1.625em;                    /* 26 / 16 */
+        margin: .4em 0 .25em 0;
+    }
+    header h3 {
+        font-size: 1em;                        /* base font size */
+        margin-left: 0;
+    }
+    header img {
+        float: none;
+    }
+    section {
+        width: 95.9596%;                       /* 100 - (2 * 2.0202) for padding */
+        float: none;
+        margin-right: 2.0202%;                 /* 20 / 990 */
+        padding-right: 0;
+    }
+    aside {
+        width: 91.9192%;                       /* 100 - (4 * 2.0202) for padding and margins */
+        float: none;
+        margin: 0 2.0202% 2.0202% 2.0202%;     /* 20 / 990 */
+    }
+}
+
+/* mobile portrait to mobile landscape */
+@media only screen and (max-width: 479px) {
+    header h2 {
+        font-size: 1.375em;                    /* 22 / 16 */
+    }
+    header h3 {
+        font-size: .8125em;                    /* 13 / 16 */
+    }
+    p {
+        font-size: .875em;                     /* 14 / 16 */
+    }
+    section h1, section h2, aside h2 {
+        font-size: 1em;                        /* base font size */
+    }
+    section li, aside li {
+        font-size: .875em;                     /* 14 / 16 */
+    }
+    aside h3 {
+        font-size: .9375em;                     /* 15 / 16 */
+    }
+    footer p {
+        font-size: .6875em;                     /* 11 / 16 */
+    }
 }
