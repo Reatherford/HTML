@@ -1,9 +1,9 @@
 /* type selectors */
 html {
-	background-image: -moz-linear-gradient(to bottom, white 0%, #facd8a 100%);
-	background-image: -webkit-linear-gradient(to bottom, white 0%, #facd8a 100%);
-	background-image: -o-linear-gradient(to bottom, white 0%, #facd8a 100%);
-	background-image: linear-gradient(to bottom, white 0%, #facd8a 100%);
+	background-image: -moz-linear-gradient(to bottom, white 0%, #a28afa 100%);
+	background-image: -webkit-linear-gradient(to bottom, white 0%, #615d99 100%);
+	background-image: -o-linear-gradient(to bottom, white 0%, #8abefa 100%);
+	background-image: linear-gradient(to bottom, white 0%, #3b5ef7 100%);
 }
 body {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -38,7 +38,7 @@ a:link, a:visited {
 	color: #931420 !important;
 }
 a:hover, a:focus {
-	color: black !important;
+	color: rgb(255, 255, 255) !important;
 }
 
 /* the styles for the header */
@@ -68,12 +68,11 @@ header img {
 /* the styles for the navigation menu - operation */
 #nav_menu ul {
 	width: 100%;                        /* full width of body */
-	list-style-type: none;
-	position: relative;
+	font-size: 80%;
 }
 #nav_menu ul ul {
 	display: none;
-	position: absolute;
+	position: relative;
 	top: 100%;
 }
 #nav_menu ul ul li {
@@ -81,7 +80,7 @@ header img {
 	position: relative;
 }
 #nav_menu ul ul li ul {
-	position: absolute;
+	position: relative;
 	left: 100%;
 	top: 0;
 }
@@ -95,6 +94,7 @@ header img {
 }
 #nav_menu ul li:hover > ul {
 	display: block;
+	position: relative;
 }
 #nav_menu > ul::after {
 	content: "";
@@ -116,7 +116,7 @@ header img {
 	background-color: #facd8a;
 }
 #nav_menu ul li a.current {
-	color: #f2972e !important;
+	color: #3b0788 !important;
 }
 #nav_menu ul li:hover ul {
 	width: 100%;
